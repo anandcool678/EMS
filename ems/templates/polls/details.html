@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+
+{%block content%}
+<h1>Detail Page</h1>
+<h2>
+    {{questions.title}}
+</h2>
+<h3>Poll is created by  <span>{{questions.created_by.first_name}}</span></h3>
+
+{%endblock content%}

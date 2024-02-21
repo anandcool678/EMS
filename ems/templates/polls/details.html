@@ -5,6 +5,11 @@
 <h2>
     {{questions.title}}
 </h2>
+{% for choice in questions.choices%}
+<p>{{choice.text}}{{choice.vote_count}}</p>
+{%empty%}
+<p>There is no choice for this question</p>
+{%endfor%}
 <h3>Poll is created by  <span>{{questions.created_by.first_name}}</span></h3>
 
 {%endblock content%}
